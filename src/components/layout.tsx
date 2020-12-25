@@ -17,9 +17,13 @@ export default function Layout({
       <Head>
         <link rel="icon" href="/favicon.ico" />
         {title ? <title>{title}</title> : <title>{siteTitle}</title>}
+        <meta charSet="utf-8" />
+        <meta name="keywords" content="christmas, giving" />
+        <meta name="author" content="Mukul Agarwal, Akshat Agarwal" />
+        <meta name="copyright" content="Mukul Agarwal, Akshat Agarwal" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Give back to your community by donating toys."
         />
       </Head>
       <Header />
