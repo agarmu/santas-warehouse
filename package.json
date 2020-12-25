@@ -15,7 +15,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+    "lint": "eslint --fix --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write"
   },
   "husky": {
@@ -27,13 +27,15 @@
   },
   "lint-staged": {
     "./src/**/*.{ts,js,jsx,tsx}": [
-      "npm run lint --fix",
+      "npm run lint",
       "npm run format"
     ]
   },
   "dependencies": {
+    "bootstrap": "4.5.3",
     "next": "10.0.3",
     "react": "17.0.1",
+    "react-bootstrap": "1.4.0",
     "react-dom": "17.0.1"
   },
   "devDependencies": {
