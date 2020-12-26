@@ -2,13 +2,15 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 function Dropdown({
   title,
+  id,
   items,
 }: {
   title: string;
+  id: string;
   items: [string, string][];
 }) {
   return (
-    <NavDropdown title={title} id="collapsible-nav-dropdown">
+    <NavDropdown title={title} id={`collapsible-nav-dropdown-${id}`}>
       {items.map((item) => (
         <NavDropdown.Item href={item[1]}> {item[0]} </NavDropdown.Item>
       ))}
@@ -29,6 +31,7 @@ export default function Header() {
           <Nav title="Give" id="collapsible-nav-dropdown">
             <Dropdown
               title="About"
+              id="info"
               items={[
                 [`About`, `/about`],
                 [`History`, `/history`],
@@ -37,6 +40,7 @@ export default function Header() {
             />
             <Dropdown
               title="Giving"
+              id="donate-receive"
               items={[
                 [`Donate`, `/donate`],
                 [`Receive`, `/receive`],
