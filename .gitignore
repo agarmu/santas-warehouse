@@ -26,3 +26,9 @@ yarn-error.log*
 
 # yarn files
 yarn.lock
+
+# environment files
+.env.local
+.env.local.example
+.env.production
+.env.production.example
