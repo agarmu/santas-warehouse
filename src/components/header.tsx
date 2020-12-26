@@ -34,7 +34,7 @@ export default function Header() {
               id="info"
               items={[
                 ['About', '/about'],
-                 ['History', '/history'],
+                ['History', '/history'],
                 ['Contact Us', '/feedback'],
               ]}
             />
