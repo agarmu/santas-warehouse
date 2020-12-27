@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
 import Header from './header';
 
 export const siteTitle = `Santa's Workshop`;
@@ -30,7 +29,7 @@ export default function Layout({
       <script type="text/javascript" src="/js/jquery.min.js" />
       <script type="text/javascript" src="/js/popper.min.js" />
       <script type="text/javascript" src="/js/bootstrap.min.js" />
-      <Container>{children}</Container>
+      <div className="container">{children}</div>
     </div>
   );
 }
