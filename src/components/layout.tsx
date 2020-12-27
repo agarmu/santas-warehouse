@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Header from './header';
 
-export const siteTitle = `Give a Gift!`;
+export const siteTitle = `Santa's Workshop`;
 
 export default function Layout({
   children,
@@ -16,7 +16,7 @@ export default function Layout({
     <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        {title ? <title>{title}</title> : <title>{siteTitle}</title>}
+        <title>{siteTitle}</title>
         <meta charSet="utf-8" />
         <meta name="keywords" content="christmas, giving" />
         <meta name="author" content="Mukul Agarwal, Akshat Agarwal" />
@@ -26,7 +26,7 @@ export default function Layout({
           content="Give back to your community by donating toys."
         />
       </Head>
-      <Header />
+      <Header title={title} />
       <script type="text/javascript" src="/js/jquery.min.js" />
       <script type="text/javascript" src="/js/popper.min.js" />
       <script type="text/javascript" src="/js/bootstrap.min.js" />

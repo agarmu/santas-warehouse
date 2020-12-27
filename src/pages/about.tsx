@@ -3,7 +3,7 @@ import Layout from 'components/layout';
 
 export default function About() {
   return (
-    <Layout>
+    <Layout title="About Us">
       <div className="jumbotron">
         <div className="p-5">
           <h1>ABOUT US</h1>

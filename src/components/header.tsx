@@ -1,4 +1,5 @@
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import React from 'react';
 
 function Dropdown({
   title,
@@ -18,7 +19,15 @@ function Dropdown({
   );
 }
 
-export default function Header() {
+function Jumbotron({ title }: { title: string }) {
+  return (
+    <div className="jumbotron jumbotron-fluid bg-primary text-center text-white">
+      <h1> {title} </h1>
+    </div>
+  );
+}
+
+export default function Header({ title }: { title?: string }) {
   return (
     <div
       style={{
@@ -49,6 +58,7 @@ export default function Header() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      {title && title !== `home` && <Jumbotron title={title} />}
     </div>
   );
 }
