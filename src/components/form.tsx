@@ -14,7 +14,7 @@ export const InputField: React.ReactNode = ({
   label,
   ...props
 }: FieldProps & InputProps & InputFieldProps) => (
-  <div className="form-group mb-3">
+  <div>
     <label htmlFor={`formInput-${id}`}>{label}</label>
     <input
       {...field}

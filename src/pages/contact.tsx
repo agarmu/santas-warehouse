@@ -30,8 +30,8 @@ class Contact extends React.Component<IProps, IState> {
         {errors.length > 0 && (
           <div className="alert alert-danger">
             <ul className="list-group">
-              {errors.map((error) => (
-                <li>{error}</li>
+              {errors.map((error: string) => (
+                <li key={error}>{error}</li>
               ))}
             </ul>
           </div>
@@ -60,6 +60,7 @@ class Contact extends React.Component<IProps, IState> {
                   const resData = await res.json();
                   if (status === 200) {
                     this.setState({ submitted: true });
+                    this.setState({ errors: [] });
                   } else {
                     this.setState({ submitted: false });
                     this.setState({ errors: resData.error.request });
