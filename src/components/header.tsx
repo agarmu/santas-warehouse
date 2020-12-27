@@ -33,17 +33,17 @@ export default function Header() {
               title="About"
               id="info"
               items={[
-                ['About', '/about'],
-                ['History', '/history'],
-                ['Contact Us', '/feedback'],
+                [`About`, `/about`],
+                [`History`, `/history`],
+                [`Contact Us`, `/feedback`],
               ]}
             />
             <Dropdown
               title="Giving"
               id="donate-receive"
               items={[
-                ['Donate', '/donate'],
-                ['Receive', '/receive'],
+                [`Donate`, `/donate`],
+                [`Receive`, `/receive`],
               ]}
             />
           </Nav>
